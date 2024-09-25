@@ -78,5 +78,20 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/about-us', (req, res) => {
+  const aboutUsData = {
+    paragraphs: [
+      "Hi, I'm Yikai. I am a senior at New York University, \
+      I major in Computer Science and my interests are in software development and data analysis.",
+
+      'I like to play soccer, and I am a super fan of Barca. I could join soccer with computer science. \
+      For example, I tried to analyze and predict the result of a LaLiga season using soccer stats.',
+    ],
+    picture: '/my_picture.png',
+  }
+
+  res.json(aboutUsData)
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
